@@ -4,7 +4,7 @@ Python script to connect with SAP and allow usage of VB scripts
 
 ## Getting Started
 
-These instructions will get you a copy of the project up and running on your local machine.
+These instructions will get you a copy of the project up and running on your local machine. You can check my [GitHub](https://github.com/teusinLS/pysap_macro) for further informations.
 
 ### Installing
 
@@ -19,7 +19,18 @@ pip install pysap_macro
 You can create a Python file for testing purpose with the following code:
 
 ```
-asdasd
+from pysap_macro import SAP
+
+class Test:
+    def __init__(self):
+        self.run()
+
+    def run(self):
+        session = SAP.connect_sap(self, connection_name="SAP ENVIRONMENT NAME")
+
+        # your VB code created by SAP below
+
+Test()
 ```
 
 ## Authors
